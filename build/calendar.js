@@ -1,9 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createCalendar = createCalendar;
-const promises_1 = require("fs/promises");
 const ics_1 = require("ics");
-async function createCalendar(assignment_schedule, path) {
+async function createCalendar(assignment_schedule) {
     if (!assignment_schedule)
         throw new Error("No assignments found.");
     const assignments = assignment_schedule.assignments;
@@ -16,11 +15,14 @@ async function createCalendar(assignment_schedule, path) {
             end: [date.getFullYear(), date.getMonth() + 1, date.getDate() + 1]
         };
     });
-    const { error, value } = (0, ics_1.createEvents)(events);
-    if (error)
-        throw error;
-    if (!value)
-        throw new Error("ICS could not generate. No value returned.");
-    await (0, promises_1.writeFile)(path, value);
+    const promise = new Promise((resolve, reject) => {
+        const { error, value } = (0, ics_1.createEvents)(events);
+        if (error)
+            return reject(error);
+        if (!value)
+            return reject(new Error("ICS could not generate."));
+        resolve(value);
+    });
+    return promise;
 }
 //# sourceMappingURL=calendar.js.map

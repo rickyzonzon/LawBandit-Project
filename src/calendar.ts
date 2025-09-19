@@ -1,8 +1,7 @@
-import { writeFile } from "fs/promises";
 import { createEvents, EventAttributes } from "ics";
 import { AssignmentScheduleType } from "./types/assignment";
 
-export async function createCalendar(assignment_schedule: AssignmentScheduleType | null, path: string) {
+export async function createCalendar(assignment_schedule: AssignmentScheduleType | null) {
     if (!assignment_schedule) throw new Error("No assignments found.");
 
     const assignments = assignment_schedule.assignments;
@@ -17,9 +16,14 @@ export async function createCalendar(assignment_schedule: AssignmentScheduleType
         };
     });
     
-    const { error, value } = createEvents(events);
-    if (error) throw error;
-    if (!value) throw new Error("ICS could not generate. No value returned.");
-    
-    await writeFile(path, value);
+    const promise = new Promise((resolve, reject) => {
+        const { error, value } = createEvents(events);
+
+        if (error) return reject(error);
+        if (!value) return reject(new Error("ICS could not generate."));
+
+        resolve(value);
+    });
+
+    return promise;
 }

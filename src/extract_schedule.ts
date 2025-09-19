@@ -1,16 +1,8 @@
 // import { Ollama } from 'ollama';
 import OpenAI from "openai";
-import { z } from "zod";
 import { zodTextFormat } from "openai/helpers/zod";
 import dotenv from 'dotenv';
-
-export const AssignmentSchedule = z.object ({
-    assignments: z.array(z.object ({
-        title: z.string(),
-        due_date: z.string().date(),
-        description: z.string()
-    }))
-})
+import { AssignmentSchedule } from "./types/assignment";
 
 export async function extractSchedule(text: string) {
     dotenv.config();

@@ -1,10 +1,5 @@
 import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
-// import dotenv from 'dotenv';
-
-// dotenv.config();
 
 type Assignment = {
   title: string,
@@ -16,9 +11,10 @@ function App() {
 
   // Keep track of the file, the assignments, the upload status, and loading status
   const [file, setFile] = useState<File | null>(null);
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
   const [assignments, setAssignments] = useState<Assignment[] | null>(null);
   const [loading, setLoading] = useState(false);
+  const [calendar, setCalendar] = useState<string | null>(null);
 
   // Store selected pdf
   const storeFile = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,48 +28,49 @@ function App() {
     if (!file) return;
 
     setLoading(true);
-    setMessage("");
+    setMessage('');
+    setAssignments(null);
+    setCalendar(null);
 
     const formData = new FormData();
-    formData.append("syllabus", file);
+    formData.append('syllabus', file);
 
     try {
-      const response = await fetch("http://localhost:3000/upload", {
-        method: "POST",
+      const response = await fetch('/api/upload', {
+        method: 'POST',
         body: formData
       });
       
       const data = await response.json();
 
-      console.log(data);
-      
-      if (data.assignments) {
-        setAssignments(data.assignments);
-        setMessage("File upload success.");
+      if (data.assignments.assignments) {
+        setAssignments(data.assignments.assignments);
+        setCalendar(data.calendar)
+        setMessage('File upload success.');
       } else {
-        setMessage("No assignments detected.");
+        setMessage('No assignments detected.');
       }
     } catch (err) {
       console.error(err);
-      setMessage("File upload failure.");
+      setMessage('File upload failure.');
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div style={{padding: "2rem"}}>
+    <div style={{padding: '2rem'}}>
 
       <h1>Syllabus Upload</h1>
-      <input type="file" accept="application/pdf" onChange={storeFile} />
-      <button onClick={upload} disabled={loading} style={{ marginLeft: "1rem" }}>
-          {loading ? "Uploading..." : "Upload syllabus"}
+      <input type='file' accept='application/pdf' onChange={storeFile} />
+      <button onClick={upload} disabled={loading} style={{ marginLeft: '1rem' }}>
+          {loading ? 'Uploading...' : 'Upload syllabus'}
       </button>
 
       <p>{message}</p>
 
       {assignments && assignments.length > 0 && (
-        <div style={{ marginTop: "2rem" }}>
+        <div style={{ marginTop: '2rem' }}>
           <h2>Assignments</h2>
           <table border={1} cellPadding={5}>
             <thead>
@@ -84,18 +81,22 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              {assignments.map((a, index) => (
+              {assignments.map((value, index) => (
                 <tr key={index}>
-                  <td>{a.title}</td>
-                  <td>{a.due_date}</td>
-                  <td>{a.description}</td>
+                  <td>{value.title}</td>
+                  <td>{value.due_date}</td>
+                  <td>{value.description}</td>
                 </tr>
               ))}
             </tbody>
           </table>
-          <a href="/assignments.ics" download style={{ display: "block", marginTop: "1rem"}}>
-              Download Calendar as .ics
-          </a>
+          {calendar && (
+            <a href={`data:text/calendar;charset=utf-8,${encodeURIComponent(calendar)}`} 
+                download='assignments.ics'
+                style={{ display: 'block', marginTop: '1rem'}}>
+                Download Calendar as .ics
+            </a>
+          )}
         </div>
       )}
     </div>

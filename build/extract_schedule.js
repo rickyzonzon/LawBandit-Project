@@ -3,20 +3,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AssignmentSchedule = void 0;
 exports.extractSchedule = extractSchedule;
 // import { Ollama } from 'ollama';
 const openai_1 = __importDefault(require("openai"));
-const zod_1 = require("zod");
-const zod_2 = require("openai/helpers/zod");
+const zod_1 = require("openai/helpers/zod");
 const dotenv_1 = __importDefault(require("dotenv"));
-exports.AssignmentSchedule = zod_1.z.object({
-    assignments: zod_1.z.array(zod_1.z.object({
-        title: zod_1.z.string(),
-        due_date: zod_1.z.string().date(),
-        description: zod_1.z.string()
-    }))
-});
+const assignment_1 = require("./types/assignment");
 async function extractSchedule(text) {
     dotenv_1.default.config();
     const client = new openai_1.default({
@@ -46,7 +38,7 @@ async function extractSchedule(text) {
                 }
             ],
             text: {
-                format: (0, zod_2.zodTextFormat)(exports.AssignmentSchedule, "assignment_schedule")
+                format: (0, zod_1.zodTextFormat)(assignment_1.AssignmentSchedule, "assignment_schedule")
             }
         });
         return response.output_parsed;
