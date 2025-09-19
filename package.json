@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node build/app.js"
   },
+  "private": true,
+  "workspaces": ["frontend"],
   "keywords": [],
   "author": "",
   "license": "ISC",
