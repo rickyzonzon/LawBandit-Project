@@ -30,7 +30,7 @@ const upload = multer({
 });
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://law-bandit-project.vercel.app",
   methods: ["GET", "POST"]
 }));
 

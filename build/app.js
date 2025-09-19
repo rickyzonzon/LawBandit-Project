@@ -32,7 +32,7 @@ const upload = (0, multer_1.default)({
     }
 });
 app.use((0, cors_1.default)({
-    origin: "http://localhost:5173",
+    origin: "https://law-bandit-project.vercel.app",
     methods: ["GET", "POST"]
 }));
 // Server health route

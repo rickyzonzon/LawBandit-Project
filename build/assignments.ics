@@ -5,71 +5,149 @@ PRODID:adamgibbons/ics
 METHOD:PUBLISH
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:1WEHupL_zGYA-6UNCMn2t
-SUMMARY:Draft of Partial Motion or Opposition to Motion to Dismiss
-DTSTAMP:20250919T081411Z
-DTSTART;VALUE=DATE:20250124
-DESCRIPTION:Bring a draft to class (2 printed copies). This draft supports 
-	the Motion to Dismiss/Opposition unit.
+UID:qnp1HcyYvtWpQ_ymrZ7a2
+SUMMARY:Week 1 Introductory Video
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240819
+DESCRIPTION:Watch the introductory video for the week before the Monday cla
+	ss (course meets Mon/Wed 9:00–10:50 am).
 END:VEVENT
 BEGIN:VEVENT
-UID:WUTTSaUB-xp8nFaZ1ZZDZ
-SUMMARY:Partial Motion to Dismiss or Opposition (submission for conferences
-	)
-DTSTAMP:20250919T081411Z
-DTSTART;VALUE=DATE:20250130
-DESCRIPTION:Submit on TWEN at least 24 hours before your scheduled individu
-	al Zoom conference held in lieu of Week 3 class (week of Jan 27–31\, 2025)
-	. Due date shown is an estimate assuming a Friday conference\; your actual
-	 deadline is 24 hours before your assigned conference time.
+UID:qR6wL3oT8TP1-ZLT7ukqb
+SUMMARY:Week 1 Reading – Monday
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240819
+DESCRIPTION:Introduction materials (Hawkins v. McGee) and Home Building v. 
+	Blaisdell. Complete before class.
 END:VEVENT
 BEGIN:VEVENT
-UID:IJ5t7neB75_WLrZu3s6Yt
-SUMMARY:Complete Motion to Dismiss or Opposition
-DTSTAMP:20250919T081411Z
-DTSTART;VALUE=DATE:20250214
-DESCRIPTION:Submit your complete motion or opposition by the start of class
-	. This is the culminating written submission for the trial-motion unit.
+UID:vWOR6Hes48K66zk7Vu_Qy
+SUMMARY:Week 1 Reading – Wednesday
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240821
+DESCRIPTION:Door Dash\, Inc. v. City of New York\; pp. 38–54. Complete befo
+	re class.
 END:VEVENT
 BEGIN:VEVENT
-UID:m1reOtDF7EgpP_lOR2_9E
-SUMMARY:Oral Argument on Motion or Opposition
-DTSTAMP:20250919T081411Z
-DTSTART;VALUE=DATE:20250214
-DESCRIPTION:In-class oral arguments on the motion/opposition will be conduc
-	ted during the Feb 14 class session.
+UID:qjR7pUnTcWSnayQ2lJW6k
+SUMMARY:Week 2 Introductory Video
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240826
+DESCRIPTION:Watch the introductory video for the week before the Monday cla
+	ss.
 END:VEVENT
 BEGIN:VEVENT
-UID:uM2YSy3gzLtTlt8HJTZzJ
-SUMMARY:Research Report to Supervising Attorney
-DTSTAMP:20250919T081411Z
-DTSTART;VALUE=DATE:20250307
-DESCRIPTION:Submit the research report for the appellate brief project. The
-	 specific submission time and method will be provided in the assignment ma
-	terials\; due in connection with Week 8 (Mar 7) activities.
+UID:OLiSUzf8qCxd6FUTaqJLe
+SUMMARY:Week 2 Reading – Monday
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240826
+DESCRIPTION:Pages 66–90. Complete before class.
 END:VEVENT
 BEGIN:VEVENT
-UID:YyeIgUHNACAdgXqymH1fw
-SUMMARY:Draft of Final Appellate Brief (bring to class)
-DTSTAMP:20250919T081411Z
-DTSTART;VALUE=DATE:20250321
-DESCRIPTION:Bring a draft of your final appellate brief to class for discus
-	sion and feedback.
+UID:tsyVqxEZdqEfz3WECi0Eq
+SUMMARY:Week 2 Reading – Wednesday
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240828
+DESCRIPTION:Pages 91–101 and 119–138. Complete before class.
 END:VEVENT
 BEGIN:VEVENT
-UID:apSOrJR96_E98bvr2n6ZQ
-SUMMARY:Final Appellate Brief
-DTSTAMP:20250919T081411Z
-DTSTART;VALUE=DATE:20250331
-DESCRIPTION:Submit on TWEN by 8:00 p.m. on Monday\, March 31\, 2025.
+UID:QjLVPMSeWKoe1CIRKvW5Y
+SUMMARY:Week 3 Introductory Video
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240904
+DESCRIPTION:Labor Day holiday on Monday\; watch the introductory video befo
+	re the first class of the week (Wednesday).
 END:VEVENT
 BEGIN:VEVENT
-UID:4140AXoPLPWXb1KqRw7-h
-SUMMARY:Final Oral Argument on Appellate Brief
-DTSTAMP:20250919T081411Z
-DTSTART;VALUE=DATE:20250403
-DESCRIPTION:Oral arguments will be scheduled on April 3–4\, 2025. Be availa
-	ble both days\; specific date/time/location to be announced. If you have a
-	 conflict with these dates\, notify the professor by February 7\, 2025.
+UID:R1NrAfJhM1vpNmXQA_C0z
+SUMMARY:Week 3 Reading – Wednesday
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240904
+DESCRIPTION:Pages 153–172. Complete before class.
+END:VEVENT
+BEGIN:VEVENT
+UID:u3Wm1mNgedMcaPSyR3QgR
+SUMMARY:Week 4 Introductory Video
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240909
+DESCRIPTION:Watch the introductory video for the week before the Monday cla
+	ss.
+END:VEVENT
+BEGIN:VEVENT
+UID:4NtJOU9jvyA4F75p8bfZt
+SUMMARY:Week 4 Reading – Monday
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240909
+DESCRIPTION:Pages 181–201. Complete before class.
+END:VEVENT
+BEGIN:VEVENT
+UID:_Etzj9yA0x9wRUCcEa-cM
+SUMMARY:Week 4 Reading – Wednesday
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240911
+DESCRIPTION:Pages 206–222. Complete before class.
+END:VEVENT
+BEGIN:VEVENT
+UID:UG93nmWJPR0kGrZU3i9gl
+SUMMARY:Week 5 Introductory Video
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240916
+DESCRIPTION:Watch the introductory video for the week before the Monday cla
+	ss.
+END:VEVENT
+BEGIN:VEVENT
+UID:A2dV4Cohe6QAo2ehoV0yG
+SUMMARY:Week 5 Reading – Monday
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240916
+DESCRIPTION:Pages 223–240. Complete before class.
+END:VEVENT
+BEGIN:VEVENT
+UID:6T-l-f3PHIqWexFF95lvC
+SUMMARY:Week 5 Reading – Wednesday
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240918
+DESCRIPTION:Pages 240–251 and 258–263. Complete before class.
+END:VEVENT
+BEGIN:VEVENT
+UID:mSbhcrADHLRXSPJ30lGOq
+SUMMARY:Week 6 Introductory Video
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240923
+DESCRIPTION:Watch the introductory video for the week before the Monday cla
+	ss.
+END:VEVENT
+BEGIN:VEVENT
+UID:Zdvxrg7dAxf6zkNjkUhpP
+SUMMARY:Week 6 Reading – Monday
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240923
+DESCRIPTION:Hamer v. Sidway (pp. 258–261)\; Ricketts v. Scothorn\; Alleghen
+	y College\; Drennan v. Star Paving\; Hoffman v. Red Owl (pp. 277–296). Com
+	plete before class.
+END:VEVENT
+BEGIN:VEVENT
+UID:d-_teutjCP9GRbW_Lnc63
+SUMMARY:Week 6 Reading – Wednesday
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240925
+DESCRIPTION:Mitchill v. Lath\; Masterson v. Sine\; Jenkins v. Eckerd Corp. 
+	(pp. 301–328). Complete before class.
+END:VEVENT
+BEGIN:VEVENT
+UID:mZUKV6-GV-2kWhFO6MSA_
+SUMMARY:Week 7 Introductory Video
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240930
+DESCRIPTION:Watch the introductory video for the week before the Monday cla
+	ss.
+END:VEVENT
+BEGIN:VEVENT
+UID:sM6xtrKVTQwUIG0kQ8BSC
+SUMMARY:Week 7 Reading – Monday
+DTSTAMP:20250919T083535Z
+DTSTART;VALUE=DATE:20240930
+DESCRIPTION:Wisconsin Knife Works v. Nat’l Metal (pp. 332–342) and UCC § 2-
+	209. Complete before class.
 END:VEVENT
 END:VCALENDAR
