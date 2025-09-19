@@ -1,0 +1,80 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:NpSFTHr9oe3J9Y7lOphO7
+SUMMARY:Draft of Partial Motion or Opposition
+DTSTAMP:20250919T025528Z
+DTSTART;VALUE=DATE:20250123
+DESCRIPTION:Bring two printed copies to class for in-class review and discu
+	ssion.
+END:VEVENT
+BEGIN:VEVENT
+UID:bg0WkvBVfGBOasPgS4wNo
+SUMMARY:Partial Motion or Opposition (submission)
+DTSTAMP:20250919T025528Z
+DTSTART;VALUE=DATE:23991231
+DESCRIPTION:Submit the document on TWEN at least 24 hours before your indiv
+	idual Week 3 conference (conferences occur the week of January 27–31\, 202
+	5\; Zoom).
+END:VEVENT
+BEGIN:VEVENT
+UID:vByfKrInPO9HW3zLHvwrA
+SUMMARY:Complete Motion to Dismiss or Opposition
+DTSTAMP:20250919T025528Z
+DTSTART;VALUE=DATE:20250213
+DESCRIPTION:Submit your full motion or opposition (trial-court level). Subm
+	ission via TWEN unless otherwise instructed.
+END:VEVENT
+BEGIN:VEVENT
+UID:Z3YA0pBaFveJSW9UjY9EB
+SUMMARY:Oral Arguments on Motion/Opposition (trial court)
+DTSTAMP:20250919T025528Z
+DTSTART;VALUE=DATE:20250213
+DESCRIPTION:In-class oral arguments during the regular class session.
+END:VEVENT
+BEGIN:VEVENT
+UID:xvrk_Q7oocMhXuCp8U81S
+SUMMARY:Research Report to Supervising Attorney
+DTSTAMP:20250919T025528Z
+DTSTART;VALUE=DATE:20250306
+DESCRIPTION:Submit a research report per the assignment materials. The prec
+	ise due date/time and submission instructions will be provided in the assi
+	gnment packet (Week 8). Graded Pass/Fail.
+END:VEVENT
+BEGIN:VEVENT
+UID:l6tgLiOOsrspHUSwmUR-q
+SUMMARY:Draft of Final Appellate Brief (bring to class)
+DTSTAMP:20250919T025528Z
+DTSTART;VALUE=DATE:20250320
+DESCRIPTION:Bring a draft of your final appellate brief to class for discus
+	sion and feedback.
+END:VEVENT
+BEGIN:VEVENT
+UID:L-pKKp_v4qOAO7fMqqBjD
+SUMMARY:Final Appellate Brief
+DTSTAMP:20250919T025528Z
+DTSTART;VALUE=DATE:20250330
+DESCRIPTION:Submit on TWEN by 8:00 p.m. This is the major written graded as
+	signment (70% of course grade).
+END:VEVENT
+BEGIN:VEVENT
+UID:Nj3KxbV4EBdcaCYKLm4u9
+SUMMARY:Final Oral Argument on Appellate Brief
+DTSTAMP:20250919T025528Z
+DTSTART;VALUE=DATE:20250402
+DESCRIPTION:Oral arguments will be scheduled on April 3–4\, 2025\; be avail
+	able both dates. Specific date/time/location will be announced later. Coun
+	ts for 15% of the course grade.
+END:VEVENT
+BEGIN:VEVENT
+UID:qQCtdieN8HjcLd0qmOqll
+SUMMARY:Online Course Evaluation
+DTSTAMP:20250919T025528Z
+DTSTART;VALUE=DATE:20250320
+DESCRIPTION:Complete the online course evaluation as directed.
+END:VEVENT
+END:VCALENDAR
