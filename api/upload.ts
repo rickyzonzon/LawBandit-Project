@@ -38,12 +38,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             const calendar = await createCalendar(assignments);
 
             res.setHeader('Content-Type', 'applications/json');
+            
             return res.status(200).json({
                 assignments,
                 calendar: calendar
             });
-
-            res.send(assignments);
         } catch (err: any) {
             console.error(err);
             return res.status(500).json({ error: err.message || 'Unknown error' });
