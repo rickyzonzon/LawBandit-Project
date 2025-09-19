@@ -2,8 +2,8 @@ import { VercelRequest, VercelResponse } from '@vercel/node';
 import pdfParse from 'pdf-parse';
 import formidable from 'formidable';
 import fs from 'fs';
-import { extractSchedule } from '../src/extract_schedule.ts';
-import { createCalendar } from '../src/calendar.ts';
+import { extractSchedule } from '../src/extract_schedule';
+import { createCalendar } from '../src/calendar';
 
 // Built-in Vercel parser can't handle pdfs
 export const config = {
@@ -20,6 +20,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const form = new formidable.IncomingForm({ keepExtensions: true });
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     form.parse(req, async (err: any, _fields: any, files: any) => {
         try {
             if (err) throw err;
@@ -43,6 +44,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 assignments,
                 calendar: calendar
             });
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (err: any) {
             console.error(err);
             return res.status(500).json({ error: err.message || 'Unknown error' });
