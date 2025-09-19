@@ -2,8 +2,8 @@ import { VercelRequest, VercelResponse } from '@vercel/node';
 import pdfParse from 'pdf-parse';
 import formidable from 'formidable';
 import fs from 'fs';
-import { extractSchedule } from '../src/extract_schedule';
-import { createCalendar } from '../src/calendar';
+import { extractSchedule } from '../frontend/src/extract_schedule';
+import { createCalendar } from '../frontend/src/calendar';
 
 // Built-in Vercel parser can't handle pdfs
 export const config = {
@@ -18,9 +18,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    const form = new formidable.IncomingForm();
+    const form = new formidable.IncomingForm({ keepExtensions: true });
 
-    form.parse(req, async (err: any, fields: any, files: any) => {
+    form.parse(req, async (err: any, _fields: any, files: any) => {
         try {
             if (err) throw err;
             
@@ -37,8 +37,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             // Create the .ics string
             const calendar = await createCalendar(assignments);
 
-            res.setHeader('Content-Type', 'applications/json');
-            
+            res.setHeader('Content-Type', 'application/json');
+
             return res.status(200).json({
                 assignments,
                 calendar: calendar
