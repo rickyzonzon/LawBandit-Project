@@ -1,5 +1,5 @@
 import { createEvents, type EventAttributes } from "ics";
-import type { AssignmentScheduleType } from "./types/assignment";
+import type { AssignmentScheduleType } from "./types/assignment.ts";
 
 export async function createCalendar(assignment_schedule: AssignmentScheduleType | null) {
     if (!assignment_schedule) throw new Error("No assignments found.");
