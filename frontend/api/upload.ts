@@ -2,8 +2,8 @@ import { VercelRequest, VercelResponse } from '@vercel/node';
 import pdfParse from 'pdf-parse';
 import formidable from 'formidable';
 import fs from 'fs';
-import { extractSchedule } from '../src/extract_schedule.ts';
-import { createCalendar } from '../src/calendar.ts';
+import { extractSchedule } from '../src/extract_schedule';
+import { createCalendar } from '../src/calendar';
 
 // Built-in Vercel parser can't handle pdfs
 export const config = {
