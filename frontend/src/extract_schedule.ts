@@ -2,7 +2,7 @@
 import OpenAI from "openai";
 import { zodTextFormat } from "openai/helpers/zod";
 import dotenv from 'dotenv';
-import { AssignmentSchedule } from "./types/assignment";
+import { AssignmentSchedule } from "./types/assignment.js";
 
 export async function extractSchedule(text: string) {
     dotenv.config();
