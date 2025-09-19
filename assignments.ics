@@ -5,76 +5,69 @@ PRODID:adamgibbons/ics
 METHOD:PUBLISH
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
-UID:NpSFTHr9oe3J9Y7lOphO7
+UID:n783kesK9CoPIOdgSCmxt
 SUMMARY:Draft of Partial Motion or Opposition
-DTSTAMP:20250919T025528Z
+DTSTAMP:20250919T070708Z
 DTSTART;VALUE=DATE:20250123
-DESCRIPTION:Bring two printed copies to class for in-class review and discu
-	ssion.
+DESCRIPTION:Bring 2 printed copies to class for in-class work and discussio
+	n.
 END:VEVENT
 BEGIN:VEVENT
-UID:bg0WkvBVfGBOasPgS4wNo
-SUMMARY:Partial Motion or Opposition (submission)
-DTSTAMP:20250919T025528Z
-DTSTART;VALUE=DATE:23991231
-DESCRIPTION:Submit the document on TWEN at least 24 hours before your indiv
-	idual Week 3 conference (conferences occur the week of January 27–31\, 202
-	5\; Zoom).
+UID:FXsd9Db4x92czTpLMs1vi
+SUMMARY:Partial Motion to Dismiss or Opposition (partial submission)
+DTSTAMP:20250919T070708Z
+DTSTART;VALUE=DATE:20250129
+DESCRIPTION:Submit on TWEN at least 24 hours before your scheduled Week 3 i
+	ndividual conference. Due date shown is an estimate assuming conferences o
+	ccur on Fri 2025-01-31\; follow your assigned conference time.
 END:VEVENT
 BEGIN:VEVENT
-UID:vByfKrInPO9HW3zLHvwrA
+UID:SCEnZzxMY86zTww0IH3Sw
 SUMMARY:Complete Motion to Dismiss or Opposition
-DTSTAMP:20250919T025528Z
+DTSTAMP:20250919T070708Z
 DTSTART;VALUE=DATE:20250213
-DESCRIPTION:Submit your full motion or opposition (trial-court level). Subm
-	ission via TWEN unless otherwise instructed.
+DESCRIPTION:Writing assignment due. Turn in per course instructions. Relate
+	d in-class oral arguments will take place the same day.
 END:VEVENT
 BEGIN:VEVENT
-UID:Z3YA0pBaFveJSW9UjY9EB
-SUMMARY:Oral Arguments on Motion/Opposition (trial court)
-DTSTAMP:20250919T025528Z
+UID:gPruGn8GOptArfQMAGV7I
+SUMMARY:Oral Argument on Motion or Opposition
+DTSTAMP:20250919T070708Z
 DTSTART;VALUE=DATE:20250213
-DESCRIPTION:In-class oral arguments during the regular class session.
+DESCRIPTION:In-class oral arguments on the motion/opposition during the Feb
+	 14 class session.
 END:VEVENT
 BEGIN:VEVENT
-UID:xvrk_Q7oocMhXuCp8U81S
+UID:boFpMVHP0JhmI61F30kJA
 SUMMARY:Research Report to Supervising Attorney
-DTSTAMP:20250919T025528Z
+DTSTAMP:20250919T070708Z
 DTSTART;VALUE=DATE:20250306
-DESCRIPTION:Submit a research report per the assignment materials. The prec
-	ise due date/time and submission instructions will be provided in the assi
-	gnment packet (Week 8). Graded Pass/Fail.
+DESCRIPTION:Writing assignment due (Pass/Fail). The exact due date and subm
+	ission instructions will be provided in the final assignment materials pos
+	ted on Feb 14\; listed here as due during Week 8 (Mar 7).
 END:VEVENT
 BEGIN:VEVENT
-UID:l6tgLiOOsrspHUSwmUR-q
-SUMMARY:Draft of Final Appellate Brief (bring to class)
-DTSTAMP:20250919T025528Z
+UID:cWhFpT-gd04aFrnkI1Vj0
+SUMMARY:Draft of Final Appellate Brief
+DTSTAMP:20250919T070708Z
 DTSTART;VALUE=DATE:20250320
 DESCRIPTION:Bring a draft of your final appellate brief to class for discus
 	sion and feedback.
 END:VEVENT
 BEGIN:VEVENT
-UID:L-pKKp_v4qOAO7fMqqBjD
+UID:8NuNQa_X5A4tt-RHdQ3Mp
 SUMMARY:Final Appellate Brief
-DTSTAMP:20250919T025528Z
+DTSTAMP:20250919T070708Z
 DTSTART;VALUE=DATE:20250330
-DESCRIPTION:Submit on TWEN by 8:00 p.m. This is the major written graded as
-	signment (70% of course grade).
+DESCRIPTION:Submit on TWEN by 8:00 p.m. local time.
 END:VEVENT
 BEGIN:VEVENT
-UID:Nj3KxbV4EBdcaCYKLm4u9
+UID:cXymutt6SUQX2qVj__vLN
 SUMMARY:Final Oral Argument on Appellate Brief
-DTSTAMP:20250919T025528Z
+DTSTAMP:20250919T070708Z
 DTSTART;VALUE=DATE:20250402
-DESCRIPTION:Oral arguments will be scheduled on April 3–4\, 2025\; be avail
-	able both dates. Specific date/time/location will be announced later. Coun
-	ts for 15% of the course grade.
-END:VEVENT
-BEGIN:VEVENT
-UID:qQCtdieN8HjcLd0qmOqll
-SUMMARY:Online Course Evaluation
-DTSTAMP:20250919T025528Z
-DTSTART;VALUE=DATE:20250320
-DESCRIPTION:Complete the online course evaluation as directed.
+DESCRIPTION:Oral arguments will be scheduled on April 3–4\, 2025. Be availa
+	ble both dates\; specific date/time/location to be announced. Notify the p
+	rofessor of any conflicts by Feb 7\, 2025.
 END:VEVENT
 END:VCALENDAR

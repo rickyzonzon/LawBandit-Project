@@ -1,5 +1,6 @@
 import express, { Request, Response, NextFunction } from 'express';
-import path from "path";
+import path from 'path';
+import cors from 'cors';
 import multer from 'multer';
 import pdfParse from 'pdf-parse';
 import dotenv from 'dotenv';
@@ -28,6 +29,11 @@ const upload = multer({
   }
 });
 
+app.use(cors({
+  origin: "http://localhost:5173",
+  methods: ["GET", "POST"]
+}));
+
 // Server health route
 app.get('/health', (_req: Request, res: Response, next: NextFunction) => {
   try {
@@ -53,12 +59,13 @@ app.post('/upload',
       const assignments = await extractSchedule(result.text);
 
       // Create the .ics file
-      await createCalendar(assignments, 'assignments.ics');
+      await createCalendar(assignments, 'build/assignments.ics');
 
-      return res.json({
-        assignments,
-        calendarUrl: "/assignments.ics"
-      });
+      // return res.json({
+      //   assignments,
+      //   calendarUrl: "/assignments.ics"
+      // });
+      return res.send(assignments);
     } catch (err) {
       next(err);
     }
@@ -66,8 +73,13 @@ app.post('/upload',
 );
 
 // Allow user to download calendar file
-app.get("/assignments.ics", (_req, res) => {
-  res.sendFile(path.join(__dirname, "assignments.ics"));
+app.get("/assignments.ics", (_req: Request, res: Response, next: NextFunction) => {
+  const filePath = path.join(__dirname, "../assignments.ics");
+  try {
+    res.sendFile(filePath);
+  } catch (err) {
+    next(err);
+  }
 });
 
 // Error handler

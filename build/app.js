@@ -4,6 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const path_1 = __importDefault(require("path"));
+const cors_1 = __importDefault(require("cors"));
 const multer_1 = __importDefault(require("multer"));
 const pdf_parse_1 = __importDefault(require("pdf-parse"));
 const dotenv_1 = __importDefault(require("dotenv"));
@@ -29,6 +31,10 @@ const upload = (0, multer_1.default)({
         }
     }
 });
+app.use((0, cors_1.default)({
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST"]
+}));
 // Server health route
 app.get('/health', (_req, res, next) => {
     try {
@@ -50,10 +56,23 @@ upload.single('syllabus'), async (req, res, next) => {
         // Extract text from the pdf
         const result = await (0, pdf_parse_1.default)(req.file.buffer);
         const assignments = await (0, extract_schedule_1.extractSchedule)(result.text);
-        await (0, calendar_1.createCalendar)(assignments, 'assignments.ics');
-        // Return json with the assignments
-        // return res.json({ filename: req.file.originalname, assignments });
+        // Create the .ics file
+        await (0, calendar_1.createCalendar)(assignments, 'build/assignments.ics');
+        // return res.json({
+        //   assignments,
+        //   calendarUrl: "/assignments.ics"
+        // });
         return res.send(assignments);
+    }
+    catch (err) {
+        next(err);
+    }
+});
+// Allow user to download calendar file
+app.get("/assignments.ics", (_req, res, next) => {
+    const filePath = path_1.default.join(__dirname, "../assignments.ics");
+    try {
+        res.sendFile(filePath);
     }
     catch (err) {
         next(err);

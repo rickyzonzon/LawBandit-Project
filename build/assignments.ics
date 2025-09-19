@@ -1,0 +1,75 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:1WEHupL_zGYA-6UNCMn2t
+SUMMARY:Draft of Partial Motion or Opposition to Motion to Dismiss
+DTSTAMP:20250919T081411Z
+DTSTART;VALUE=DATE:20250124
+DESCRIPTION:Bring a draft to class (2 printed copies). This draft supports 
+	the Motion to Dismiss/Opposition unit.
+END:VEVENT
+BEGIN:VEVENT
+UID:WUTTSaUB-xp8nFaZ1ZZDZ
+SUMMARY:Partial Motion to Dismiss or Opposition (submission for conferences
+	)
+DTSTAMP:20250919T081411Z
+DTSTART;VALUE=DATE:20250130
+DESCRIPTION:Submit on TWEN at least 24 hours before your scheduled individu
+	al Zoom conference held in lieu of Week 3 class (week of Jan 27–31\, 2025)
+	. Due date shown is an estimate assuming a Friday conference\; your actual
+	 deadline is 24 hours before your assigned conference time.
+END:VEVENT
+BEGIN:VEVENT
+UID:IJ5t7neB75_WLrZu3s6Yt
+SUMMARY:Complete Motion to Dismiss or Opposition
+DTSTAMP:20250919T081411Z
+DTSTART;VALUE=DATE:20250214
+DESCRIPTION:Submit your complete motion or opposition by the start of class
+	. This is the culminating written submission for the trial-motion unit.
+END:VEVENT
+BEGIN:VEVENT
+UID:m1reOtDF7EgpP_lOR2_9E
+SUMMARY:Oral Argument on Motion or Opposition
+DTSTAMP:20250919T081411Z
+DTSTART;VALUE=DATE:20250214
+DESCRIPTION:In-class oral arguments on the motion/opposition will be conduc
+	ted during the Feb 14 class session.
+END:VEVENT
+BEGIN:VEVENT
+UID:uM2YSy3gzLtTlt8HJTZzJ
+SUMMARY:Research Report to Supervising Attorney
+DTSTAMP:20250919T081411Z
+DTSTART;VALUE=DATE:20250307
+DESCRIPTION:Submit the research report for the appellate brief project. The
+	 specific submission time and method will be provided in the assignment ma
+	terials\; due in connection with Week 8 (Mar 7) activities.
+END:VEVENT
+BEGIN:VEVENT
+UID:YyeIgUHNACAdgXqymH1fw
+SUMMARY:Draft of Final Appellate Brief (bring to class)
+DTSTAMP:20250919T081411Z
+DTSTART;VALUE=DATE:20250321
+DESCRIPTION:Bring a draft of your final appellate brief to class for discus
+	sion and feedback.
+END:VEVENT
+BEGIN:VEVENT
+UID:apSOrJR96_E98bvr2n6ZQ
+SUMMARY:Final Appellate Brief
+DTSTAMP:20250919T081411Z
+DTSTART;VALUE=DATE:20250331
+DESCRIPTION:Submit on TWEN by 8:00 p.m. on Monday\, March 31\, 2025.
+END:VEVENT
+BEGIN:VEVENT
+UID:4140AXoPLPWXb1KqRw7-h
+SUMMARY:Final Oral Argument on Appellate Brief
+DTSTAMP:20250919T081411Z
+DTSTART;VALUE=DATE:20250403
+DESCRIPTION:Oral arguments will be scheduled on April 3–4\, 2025. Be availa
+	ble both days\; specific date/time/location to be announced. If you have a
+	 conflict with these dates\, notify the professor by February 7\, 2025.
+END:VEVENT
+END:VCALENDAR

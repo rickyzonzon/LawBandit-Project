@@ -12,8 +12,8 @@ async function createCalendar(assignment_schedule, path) {
         return {
             title: a.title,
             description: a.description,
-            start: [date.getFullYear(), date.getMonth() + 1, date.getDate()],
-            end: [date.getFullYear(), date.getMonth() + 1, date.getDate()]
+            start: [date.getFullYear(), date.getMonth() + 1, date.getDate() + 1],
+            end: [date.getFullYear(), date.getMonth() + 1, date.getDate() + 1]
         };
     });
     const { error, value } = (0, ics_1.createEvents)(events);
