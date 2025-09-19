@@ -21,6 +21,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     form.parse(req, async (err: any, _fields: any, files: any) => {
+        console.log("test");
         try {
             if (err) throw err;
             
@@ -29,8 +30,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             if (!file) {
                 return res.status(400).json({ error: 'No file uploaded' }) 
             }
-            
-            console.log(file.filepath);
 
             // Extract text from the pdf
             const result = await pdfParse(fs.readFileSync(file.filepath));
