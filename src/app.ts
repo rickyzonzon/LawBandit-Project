@@ -1,4 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express';
+import path from "path";
 import multer from 'multer';
 import pdfParse from 'pdf-parse';
 import dotenv from 'dotenv';
@@ -25,7 +26,7 @@ const upload = multer({
       cb(new Error('File uploaded was not a PDF.'))
     }
   }
-})
+});
 
 // Server health route
 app.get('/health', (_req: Request, res: Response, next: NextFunction) => {
@@ -51,17 +52,23 @@ app.post('/upload',
       const result = await pdfParse(req.file.buffer);
       const assignments = await extractSchedule(result.text);
 
+      // Create the .ics file
       await createCalendar(assignments, 'assignments.ics');
 
-      // Return json with the assignments
-      // return res.json({ filename: req.file.originalname, assignments });
-      return res.send(assignments);
-
+      return res.json({
+        assignments,
+        calendarUrl: "/assignments.ics"
+      });
     } catch (err) {
       next(err);
     }
   }
-)
+);
+
+// Allow user to download calendar file
+app.get("/assignments.ics", (_req, res) => {
+  res.sendFile(path.join(__dirname, "assignments.ics"));
+});
 
 // Error handler
 app.use((err: unknown, _req: Request, res: Response, _next: NextFunction) => {

@@ -12,8 +12,6 @@ export const AssignmentSchedule = z.object ({
     }))
 })
 
-export type AssignmentScheduleType = z.infer<typeof AssignmentSchedule>;
-
 export async function extractSchedule(text: string) {
     dotenv.config();
     

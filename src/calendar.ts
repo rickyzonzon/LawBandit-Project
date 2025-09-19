@@ -1,6 +1,6 @@
 import { writeFile } from "fs/promises";
 import { createEvents, EventAttributes } from "ics";
-import { AssignmentScheduleType } from "./extract_schedule";
+import { AssignmentScheduleType } from "./types/assignment";
 
 export async function createCalendar(assignment_schedule: AssignmentScheduleType | null, path: string) {
     if (!assignment_schedule) throw new Error("No assignments found.");
