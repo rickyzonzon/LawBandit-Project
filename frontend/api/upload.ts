@@ -1,5 +1,6 @@
 // import { VercelRequest, VercelResponse } from '@vercel/node';
-import { NextApiRequest, NextApiResponse } from 'next';
+// import { NextApiResponse } from 'next';
+import { NextApiRequest } from 'next';
 // import pdfParse from 'pdf-parse';
 import formidable from 'formidable';
 // import fs from 'fs';
@@ -13,13 +14,11 @@ export const config = {
     }   
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-            console.log(req.method);
-
-    if (req.method !== 'POST') {
-        // console.log(req.method);
-        return res.status(405).json({ error: `Method ${req.method} not allowed` });
-    }
+// export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function POST(req: NextApiRequest) {
+    // if (req.method !== 'POST') {
+    //     return res.status(405).json({ error: `Method ${req.method} not allowed` });
+    // }
 
     const form = new formidable.IncomingForm({ keepExtensions: true });
 
@@ -31,11 +30,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             });
         });
         
-        // console.log(fields);
+            // console.log(fields);
         console.log(file);
+        return new Response(JSON.stringify({ message: 'File uploaded.' }), {
+            status: 200
+        });
     } catch (err) {
         console.error('Error uploading file: ', err);
-        res.status(500).json({ error: 'Failed to upload file' });
+        return new Response(JSON.stringify({ error: 'Failed to upload file.' }), {
+            status:500
+        });
+        // res.status(500).json({ error: ' });
     }
     
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
