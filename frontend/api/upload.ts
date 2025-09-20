@@ -51,10 +51,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 resolve(files);
             });
         }) as formidable.Files;
-        
-        console.log(files);
-        
-        const pdfFile = files.pdf?.[0];
+    
+        const pdfFile = files.pdf?.[1];
 
         if (!pdfFile) return res.status(400).json({ error: 'No PDF detected' });
         
