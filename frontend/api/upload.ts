@@ -1,6 +1,6 @@
 // import { VercelRequest, VercelResponse } from '@vercel/node';
-// import { NextApiResponse } from 'next';
-import { NextApiRequest } from 'next';
+import { VercelRequest } from '@vercel/node';
+// import { NextApiRequest, NextApiResponse } from 'next';
 // import pdfParse from 'pdf-parse';
 import formidable from 'formidable';
 // import fs from 'fs';
@@ -15,7 +15,7 @@ export const config = {
 }
 
 // export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-export default async function POST(req: NextApiRequest) {
+export default async function POST(req: VercelRequest) {
     // if (req.method !== 'POST') {
     //     return res.status(405).json({ error: `Method ${req.method} not allowed` });
     // }
@@ -36,8 +36,8 @@ export default async function POST(req: NextApiRequest) {
             status: 200
         });
     } catch (err) {
-        console.error('Error uploading file: ', err);
-        return new Response(JSON.stringify({ error: 'Failed to upload file.' }), {
+        // console.error('Error uploading file: ', err);
+        return new Response(JSON.stringify({ error: `Failed to upload file. ${err}` }), {
             status:500
         });
         // res.status(500).json({ error: ' });
