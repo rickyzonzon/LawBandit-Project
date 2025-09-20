@@ -1,4 +1,5 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
+// import { VercelRequest, VercelResponse } from '@vercel/node';
+import { NextApiRequest, NextApiResponse } from 'next';
 // import pdfParse from 'pdf-parse';
 import formidable from 'formidable';
 // import fs from 'fs';
@@ -12,19 +13,18 @@ export const config = {
     }   
 }
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
-    console.log(req.method)
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method not allowed' });
+        return res.status(405).json({ error: `Method ${req.method} not allowed` });
     }
 
     const form = new formidable.IncomingForm({ keepExtensions: true });
 
     try {
         const file = await new Promise((resolve, reject) => {
-            form.parse(req, (err, fields, files) => {
+            form.parse(req, (err, file) => {
                 if (err) return reject(err);
-                resolve({ fields, files});
+                resolve(file);
             });
         });
         
