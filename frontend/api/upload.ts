@@ -14,8 +14,10 @@ export const config = {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+            console.log(req.method);
+
     if (req.method !== 'POST') {
-        console.log(req.method);
+        // console.log(req.method);
         return res.status(405).json({ error: `Method ${req.method} not allowed` });
     }
 
