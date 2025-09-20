@@ -25,6 +25,7 @@ function App() {
 
   // Store assignments
   const upload = async () => {
+    console.log("test");
     if (!file) return;
 
     setLoading(true);
