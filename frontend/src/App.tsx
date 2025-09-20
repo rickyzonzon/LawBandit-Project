@@ -25,7 +25,6 @@ function App() {
 
   // Store assignments
   const upload = async () => {
-    console.log("test");
     if (!file) return;
 
     setLoading(true);
@@ -35,6 +34,8 @@ function App() {
 
     const formData = new FormData();
     formData.append('syllabus', file);
+
+    console.log(formData);
 
     try {
       const response = await fetch('/api/upload', {
