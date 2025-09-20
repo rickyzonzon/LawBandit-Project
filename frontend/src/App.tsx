@@ -43,8 +43,8 @@ function App() {
       
       const data = await response.json();
 
-      if (data.assignments.assignments) {
-        setAssignments(data.assignments.assignments);
+      if (data.body.assignments) {
+        setAssignments(data.body.assignments);
         setCalendar(data.calendar)
         setMessage('File upload success.');
       } else {
