@@ -1,5 +1,5 @@
-// import { VercelRequest, VercelResponse } from '@vercel/node';
-import { VercelRequest } from '@vercel/node';
+import { VercelRequest, VercelResponse } from '@vercel/node';
+// import { VercelRequest } from '@vercel/node';
 // import { NextApiRequest, NextApiResponse } from 'next';
 // import pdfParse from 'pdf-parse';
 import formidable from 'formidable';
@@ -14,11 +14,11 @@ export const config = {
     }   
 }
 
-// export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-export default async function POST(req: VercelRequest) {
-    // if (req.method !== 'POST') {
-    //     return res.status(405).json({ error: `Method ${req.method} not allowed` });
-    // }
+export default async function handler(req: VercelRequest, res: VercelResponse) {
+// export default async function POST(req: VercelRequest) {
+    if (req.method !== 'POST') {
+        return res.status(405).json({ error: `Method ${req.method} not allowed` });
+    }
 
     const form = new formidable.IncomingForm({ keepExtensions: true });
 
@@ -30,17 +30,18 @@ export default async function POST(req: VercelRequest) {
             });
         });
         
-            // console.log(fields);
         console.log(file);
-        return new Response(JSON.stringify({ message: 'File uploaded.' }), {
-            status: 200
-        });
+
+        res.status(200).json({ message: 'File uploaded. '});
+        // return new Response(JSON.stringify({ message: 'File uploaded.' }), {
+        //     status: 200
+        // });
     } catch (err) {
         // console.error('Error uploading file: ', err);
-        return new Response(JSON.stringify({ error: `Failed to upload file. ${err}` }), {
-            status:500
-        });
-        // res.status(500).json({ error: ' });
+        // return new Response(JSON.stringify({ error: `Failed to upload file. ${err}` }), {
+        //     status:500
+        // });
+        res.status(500).json({ error: `Failed to upload file. ${err}`});
     }
     
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
