@@ -1,6 +1,6 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import pdfParse from 'pdf-parse';
-import formidable from 'formidable';
+import formidable, { IncomingForm } from 'formidable';
 import fs from 'fs';
 import { extractSchedule } from '../src/extract_schedule.js';
 import { createCalendar } from '../src/calendar.js';
@@ -17,7 +17,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(405).json({ error: `Method ${req.method} not allowed` });
     }
 
-    const form = formidable({ uploadDir: './public', keepExtensions: true });
+    const form = new IncomingForm({ uploadDir: './public', keepExtensions: true });
 
     // form.parse(req, (err, file) => {
     //         if (err) res.status(500).json({ error: `Failed to upload file. ${err}`});
