@@ -36,6 +36,7 @@ function App() {
     formData.append('syllabus', file);
 
     try {
+      console.log("test");
       const response = await fetch('/api/upload', {
         method: 'POST',
         body: formData
