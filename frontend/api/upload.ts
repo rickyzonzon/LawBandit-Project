@@ -1,11 +1,9 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-// import { VercelRequest } from '@vercel/node';
-// import { NextApiRequest, NextApiResponse } from 'next';
-// import pdfParse from 'pdf-parse';
+import pdfParse from 'pdf-parse';
 import formidable from 'formidable';
-// import fs from 'fs';
-// import { extractSchedule } from '../src/extract_schedule.js';
-// import { createCalendar } from '../src/calendar.js';
+import fs from 'fs';
+import { extractSchedule } from '../src/extract_schedule.js';
+import { createCalendar } from '../src/calendar.js';
 
 // Built-in Vercel parser can't handle pdfs
 export const config = {
@@ -15,7 +13,6 @@ export const config = {
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-// export default async function POST(req: VercelRequest) {
     if (req.method !== 'POST') {
         return res.status(405).json({ error: `Method ${req.method} not allowed` });
     }
@@ -33,14 +30,21 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         console.log(file);
 
         res.status(200).json({ message: 'File uploaded. '});
-        // return new Response(JSON.stringify({ message: 'File uploaded.' }), {
-        //     status: 200
-        // });
+
+        //Extract text from the pdf
+        const result = await pdfParse(fs.readFileSync(file.filepath));
+        const assignments = await extractSchedule(result.text);
+        
+        // Create the .ics string
+        const calendar = await createCalendar(assignments);
+
+        res.setHeader('Content-Type', 'application/json');
+
+        return res.status(200).json({
+            assignments,
+            calendar: calendar
+        });
     } catch (err) {
-        // console.error('Error uploading file: ', err);
-        // return new Response(JSON.stringify({ error: `Failed to upload file. ${err}` }), {
-        //     status:500
-        // });
         res.status(500).json({ error: `Failed to upload file. ${err}`});
     }
     
