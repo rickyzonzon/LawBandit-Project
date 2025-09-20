@@ -20,7 +20,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(405).json({ error: `Method ${req.method} not allowed` });
     }
 
-    const form = new formidable.IncomingForm({ keepExtensions: true });
+    const form = formidable({ uploadDir: './public', keepExtensions: true });
 
     try {
         const file = await new Promise((resolve, reject) => {

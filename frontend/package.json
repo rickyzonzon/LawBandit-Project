@@ -13,6 +13,7 @@
     "@vercel/node": "^5.3.23",
     "dotenv": "^17.2.2",
     "formidable": "^3.5.4",
+    "formidable-serverless": "^1.1.1",
     "ics": "^3.8.1",
     "next": "^15.5.3",
     "openai": "^5.22.0",
